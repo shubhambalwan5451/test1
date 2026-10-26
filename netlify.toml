@@ -1,0 +1,5 @@
+# The site is static HTML, so no build step is needed.
+# Docker is only used for local hosting (see README) and isn't available on Netlify.
+[build]
+  publish = "sites"
+  command = ""
