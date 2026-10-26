@@ -1,0 +1,22 @@
+services:
+  alpine:
+    build: .
+    container_name: alpine-host
+    hostname: alpine
+
+    # No CPU or RAM limits imposed by this Compose file.
+    network_mode: host
+
+    # Persistent project files.
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+
+      # Allows management of containers using the host Docker daemon.
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    stdin_open: true
+    tty: true
+
+    restart: unless-stopped
+
