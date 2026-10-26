@@ -16,7 +16,7 @@ Open http://localhost:8080.
 docker compose down
 ```
 
-Edit `site/index.html` to change the website, then rebuild:
+Edit `sites/index.html` to change the website, then rebuild:
 
 ```bash
 docker compose up -d --build
